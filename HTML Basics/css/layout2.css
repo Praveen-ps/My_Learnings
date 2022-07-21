@@ -1,0 +1,36 @@
+.blog{
+	width: 70%;
+	margin-right: auto;
+	margin-left: auto;
+	height: 700px;
+	overflow: auto;
+}
+.top_section{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.middle_section{
+	display: flex;
+}
+.middle_section div{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0px;
+}
+img{
+	height: 150px;
+	width: 90%;
+
+}
+button{
+	padding: 5px;
+	background-color: dodgerblue;
+	color: white;
+	border: 1px solid dodgerblue;
+	
+}

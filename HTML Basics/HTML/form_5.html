@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>form5</title>
+	<style type="text/css">
+		i{
+			color: red;
+		}
+		#account_div,#fname_div,#lname_div,#country_div,#address_div,#city_div,#state_div,#zipcode_div,#phone_div{
+			display: flex;
+			padding-top: 20px;
+		}
+		#account_div div,#fname_div div,#lname_div div,#country_div div,#address_div div,#city_div div,#state_div div,#zipcode_div div,#phone_div div {
+			flex: 1;
+		}
+		form{
+			width: 50%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<p>(<i>*</i>) Required fields</p>
+		<div id="account_div">
+			<div>
+				<label for="account">Account Type<i>*</i></label>
+			</div>
+			<div>
+				<input type="radio" name="account" value="personal" id="account personal">
+				<label for="personal">Personal Account</label>
+
+				<input type="radio" name="account" value="business" id="account business">
+				<label for="business">Business Account</label>
+			</div>
+		</div>
+		<div id="fname_div">
+			<div>
+				<label for="fname">First name<i>*</i></label>
+			</div>
+			<div>
+				<input type="text" name="fname" id="fname" required />
+			</div>
+		</div>
+		<div id="lname_div">
+			<div>
+				<label for="lname">Last name<i>*</i></label>
+			</div>
+			<div>
+				<input type="text" name="lname" id="lname" required />
+			</div>
+		</div>
+		<div id="country_div">
+			<div>
+				<label for="country">Country/Region<i>*</i></label>
+			</div>
+			<div>
+				<select id="country">
+					<option>India</option>
+					<option>US</option>
+					<option>UK</option>
+					<option>France</option>
+				</select>
+			</div>
+		</div>
+		<div id="address_div">
+			<div>
+				<label for="address">Street Address<i>*</i></label>
+			</div>
+			<div>
+				<input type="text" name="Street_address" id="address" required />
+			</div>
+		</div>
+		<div id="address_div">
+			<div>
+				<label for="address2">Street Address 2</label>
+			</div>
+			<div>
+				<input type="text" name="Street_address2" id="address2"  />
+			</div>
+		</div>
+		<div id="city_div">
+			<div>
+				<label for="city">City<i>*</i></label>
+			</div>
+			<div>
+				<input type="text" name="city" id="city" required />
+			</div>
+		</div>
+		<div id="state_div">
+			<div>
+				<label for="sate">State/Province<i>*</i></label>
+			</div>
+			<div>
+				<select id="state">
+					<option>select state</option>
+					<option>US</option>
+					<option>UK</option>
+					<option>France</option>
+				</select>
+			</div>
+		</div>
+		<div id="zipcode_div">
+			<div>
+				<label for="zipcode">Zip Code<i>*</i></label>
+			</div>
+			<div>
+				<input type="number" name="zipcode" id="zipcode" required />
+			</div>
+		</div>
+		<div id="phone_div">
+			<div>
+				<h1></h1>
+				<label for="phone_number">Phone Number<i>*</i></label>
+			</div>
+			<div>
+				<p>Only used for questions related to your order</p>
+				<input type="number" name="phone_number" id="phone_number" required />
+			</div>
+		</div>
+	</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

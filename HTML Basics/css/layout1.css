@@ -1,0 +1,39 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+h1{
+	margin-bottom:5px ;
+}
+body{
+	width: 50%;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+h1,#layout div+span {
+	background-color: lightblue;
+}
+#main_menu,#right_menu{
+	background-color: wheat;
+	padding: 10px;
+}
+#main{
+	display: flex;
+	justify-content: space-between;
+	height: 300px;
+}
+li{
+	list-style-type: none;
+	text-align: left;
+}
+#content{
+	flex: 2;
+	background-color: whitesmoke;
+	text-align: left;
+	padding: 10px;
+}
+span{
+	display: block;
+}
+

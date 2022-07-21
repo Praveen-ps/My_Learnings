@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Form 4</title>
+		<style type="text/css">
+			ul{
+				list-style-type: none;
+			}
+			#name_div,#email_div,#age_div,#role_div,#recommend_div,#suggestion_div,#like_div{
+				display: flex;
+				padding-top: 20px;
+			}
+			#name_div div,#email_div div,#age_div div,#role_div div,#recommend_div div,#suggestion_div div,#like_div div{
+				flex: 1;
+				display: flex;
+			}
+			#label{
+				justify-content: flex-end;
+				padding-right: 10px;
+				padding-left: 20px;
+			}
+			h1{
+				text-align: center;
+				font-weight: bolder;
+			}
+			p{
+				text-align: center;
+			}
+			form{
+				width: 60%;
+				margin-left: auto;
+				margin-right: auto;
+				border: 1px solid white;
+				border-radius: 12px;
+				background-color: white;
+			}
+			body{
+				background-color: steelblue;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Survey Form</h1>
+		<form>
+			<p>Let us know how we can improve FreeCodeCamp</p>
+			<div id="name_div">
+				<div id="label">
+					<label for="name">Name:</label>
+				</div>
+				<div>
+					<input type="text" name="name" id="name" placeholder="Enter your name"/>
+				</div>
+			</div>
+			<div id="email_div">
+				<div id="label">
+					<label for="email">Email:</label>
+				</div>
+				<div>
+					<input type="email" name="mailID" id="email" placeholder="Enter your Email"/>
+				</div>
+			</div>
+			<div id="age_div">
+				<div id="label">
+					<label for="age">Age:</label>
+				</div>
+				<div>
+					<input type="number" name="age" id="age" placeholder="Age"/>
+				</div>
+			</div>
+			<div id="role_div">
+				<div id="label">
+					<label for="role">Which option describe your current role?:</label>
+				</div>
+				<div>
+					<select id="role">
+						<option>Student</option>
+						<option>Employee</option>
+						<option>Nill</option>
+					</select>
+				</div>
+			</div>
+			<div id="recommend_div">
+				<div id="label">
+					<label for="recommend">How likely is that you would recommend FreeCodeCamp to a friend? </label>
+				</div>
+				<div>
+					<ul>
+						<li>
+							<input type="radio" name="recomendation" value="definitely" id="recommend definitely">
+							<label for="definitely">Definitely</label>
+						</li>
+						<li>
+							<input type="radio" name="recomendation" value="Maybe" id="recommend Maybe">
+							<label for="Maybe">Maybe</label>
+						</li>
+						<li>
+							<input type="radio" name="recomendation" value="NotSure" id="recommend NotSure">
+							<label for="NotSure">Not Sure</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="like_div">
+				<div id="label">
+					<label for="likes">What do you like most in FCC:</label>
+				</div>
+				<div>
+					<select id="likes">
+						<option>Select an option</option>
+						<option>online mode</option>
+						<option>code quality</option>
+					</select>
+				</div>
+			</div>
+			<div id="suggestion_div">
+				<div id="label">
+					<label for="suggestion"> Things that should be improved in future(Check all that apply):</label>
+				</div>
+				<div>
+					<ul>
+						<li>
+							<input type="Checkbox" name="suggestion" id="suggestion front-end" value="Front-end Projects">
+							<label for="front-end">Front-end Projects</label>
+						</li>
+						<li>
+							<input type="Checkbox" name="suggestion" id="suggestion back-end" value="back-end Projects">
+							<label for="back-end">back-end Projects</label>
+						</li>
+						<li>
+							<input type="Checkbox" name="suggestion" id="suggestion data_visualization" value="Data visualization">
+							<label for="data_visualization">Data Visualization</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

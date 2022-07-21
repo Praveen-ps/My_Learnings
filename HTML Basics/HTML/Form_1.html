@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,intial-scale=1.0">
+		<meta name="description" content="form">
+		<title>Form 1</title>
+		<script src="https://kit.fontawesome.com/813ef4580d.js" crossorigin="anonymous"></script>
+
+		<style>
+			form{
+				height:500px;
+				width:300px;
+				border:1px solid green;
+				background-color:green;
+				margin-left:auto;
+				margin-right:auto;
+				}
+			h1,label,input,a{
+				color:white;
+				margin-left:20px;
+			}
+			button{
+				color:green;
+				background-color:white;
+				border:1px solid white;
+				margin-left:20px
+			}
+			input{
+				width:80%;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<form>
+			<h1>Contact Us</h1>
+			<label for="name">Name</label><br/>
+			<input type="text" id="name" name="name" placeholder="John F Cannedy"/><br/><br/>
+			<label for="Email">Email</label></br/>
+			<input type="email" id="Email" name="MailID" placeholder="yourname@company.com"/><br/><br/>
+			<label for="website" >Website</label><br/>
+			<input type="url" id="website" name="websiteUrl" value="http://" style="color:black"/><br/><br/>
+			<label for="affilation">Affilation</label><br/>
+			<input type="text" id="affilation" name="orgName"placeholder="Your organisation" /></br><br/>
+			<i class="fa-solid fa-circle-check"></i>
+			<a href="#">Subcribe Newsletter?<a>
+			<br/><br/><br/><br/>
+			<button type="submit"><i class="fa-solid fa-message-arrow-up-right"></i> Send it out</button>
+			<button type="cancel" ><i class="fa-regular fa-circle-xmark"></i>cancel</button>
+		</form>
+	</body>
+</html>

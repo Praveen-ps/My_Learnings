@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Form 6</title>
+	<style type="text/css">
+		#div{
+			background-color: deepskyblue;
+			border: 1px solid black;
+			padding: 10px 20px;
+		}
+		#combine{
+			display: flex;
+			padding-top:20px ;
+		}
+		#combine div{
+			flex: 1;
+		}
+		#year_label{
+			margin-left: 5px;
+		}
+		form{
+			width:50%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#buttons{
+			display: flex;
+			flex-direction: row-reverse;
+			margin-top: 20px;
+		}
+		#buttons input{
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<h2>Payment Details</h2>
+		<div id="div">
+		<div id="combine">
+			<div>
+				<label for="card_no">Card Number</label>
+			</div>
+			<div id="input">
+				<input type="Number" name="card_no" id="card_no"/>
+			</div>
+		</div>
+		<div id="combine">
+			<div>
+				<label for="exp_date">Card Number</label>
+			</div>
+			<div id="input date">
+					<label for="month">Month:</label>
+					<input type="number" name="month" min="1" max="12"/>
+					<label for="year" id="year_label">Year:</label>
+					<input type="number" name="year" min="1800" max="2500"/>
+			</div>
+		</div>
+		<div id="combine">
+			<div>
+				<label for="sec_code">3 Digit security Code:</label>
+			</div>
+			<div id="input">
+				<input type="password" name="sec_code" id="sec_code" min="100" max="999"  />
+			</div>
+		</div>
+		<div id="combine">
+			<div>
+				<label for="name"> Name on card</label>
+			</div>
+			<div id="input">
+				<input type="text" name="name" id="name"/>
+			</div>
+		</div>
+		<div id="combine">
+			<div>
+				<label for="address">Billing Address</label>
+			</div>
+			<div id="input">
+				<input type="text" name="address" id="address"/>
+			</div>
+		</div>
+
+		<div id="combine">
+			<div>
+				<label for="city">City</label>
+			</div>
+			<div id="input">
+				<input type="text" name="city" id="city"/>
+			</div>
+		</div>
+		<div id="combine">
+			<div>
+				<label for="state"> State</label>
+			</div>
+			<div id="input">
+				<input type="text" name="state" id="state"/>
+			</div>
+		</div>
+		<div id="combine">
+			<div>
+				<label for="zip">Zip Code</label>
+			</div>
+			<div id="input">
+				<input type="text" name="zip" id="zip"/>
+			</div>
+		</div>
+	</div>
+	<div id="buttons">
+		<input type="reset" name="reset" value="Reset Form">
+		<input type="submit" name="submit" value="submit Member Application"/>
+	</div>
+	</form>
+</body>
+</html>

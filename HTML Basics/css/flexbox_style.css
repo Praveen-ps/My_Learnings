@@ -1,0 +1,29 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	width: 50%;
+	margin-right: auto;
+	margin-left: auto;
+}
+h1{
+	color: white;
+	background-color: purple;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+	font-weight: 300;
+}
+#flex_box{
+	display: flex;
+	justify-content: space-evenly;
+	height: 300px;
+}
+#flex_box div{
+	flex: 1;
+	overflow: auto;
+	background-color: powderblue;
+	margin: 5px;
+}

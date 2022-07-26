@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/listingpage.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/813ef4580d.js" crossorigin="anonymous"></script>
+    <title>Listing Page</title>
+  </head>
+  <body>
+    <!-- top_section starts  -->
+    <div class="top_section container-fluid">
+      <!-- nav bar starts  -->
+      <header class="navbar navbar-expand-md navbar-dark bd-navbar p-0 border-bottom border-secondary">
+        <nav class="container-xxl flex-wrap flex-md-nowrap  my-lg-4" >
+          <a class="navbar-brand p-0 me-2" href="#" >
+            <img src="../images/logo.png" />
+          </a>
+      
+          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+            </svg>
+      
+          </button>
+      
+          <div class="navbar-collapse collapse d-lg-flex justify-content-around" id="bdNavbar" >
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0 justify-content-between ">
+              <li class="nav-item col-6 col-md-auto px-lg-4">
+                <a class="nav-link p-2 active" href="Index.html" >HOME</a>
+              </li>
+              <li class="nav-item col-6 col-md-auto px-lg-4">
+                <a class="nav-link p-2 active"  href="CategoryPage.html" >CATEGORY</a>
+              </li>
+              <li class="nav-item col-6 col-md-auto px-lg-4">
+                <a class="nav-link p-2 "  href="listingpage.html" >LISTING</a>
+              </li>
+              <li class="nav-item col-6 col-md-auto px-lg-4">
+                <a class="nav-link p-2 active"  href="ContactUs.html" >CONTACT US</a>
+              </li>
+            </ul>
+      
+            <hr class="d-md-none text-white-50">
+            <div class="d-flex justify-content-end">
+              <a class="btn btn-danger btn-bd-download d-lg-inline-block my-2 my-md-0 ms-md-3 " href="#"><i class="fa-solid fa-circle white pe-2"></i>Add Your Listing</a>
+            </div>  
+          </div>
+        </nav>
+      </header>
+      <!-- nav bar starts  -->
+      <!-- jumbotron class starts  -->
+      <div class=" d-flex flex-column text-start text-white py-5 jumbotron-listing  ">
+        <p class="fs-5 fw-normal ps-3"> CHECK OUT OUR LISTING</p>
+        <h1 class="fw-bold display-3 w-75 ps-3">Item Listings of Different Categories</h1>
+      </div>
+      <!-- jumbotron class end  -->
+  </div>
+  <!-- top_section ends  -->
+  <!-- middle start  -->
+  <div class="container py-5">
+    <!-- list tab starts  -->
+    <div class="d-flex align-items-start container pb-5 my-5">
+      <div class="nav flex-column nav-pills m-0  w-25 me-3 me-md-4  " id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <button class="nav-link active rounded text-white bg-dark pad" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
+          
+          <img class="p-4 rounded-circle bg-light " src="../images/search-icon-01.png"/>
+          Apartments
+          
+        </button>
+        
+        <button class="nav-link rounded text-white bg-secondary pad" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+          <img class="p-4 rounded-circle bg-light " src="../images/search-icon-02.png"/>
+          Foods & Life
+        </button>
+        
+        <button class="nav-link rounded text-white bg-secondary ps-0 pe-md-4  pad" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+          <img class="p-4 car rounded-circle bg-light" src="../images/search-icon-03.png"/>
+          Cars
+        </button>
+        
+        <button class="nav-link rounded text-white bg-secondary ms-0 pe-md-3  pad" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+          <img class="p-4 rounded-circle bg-light " src="../images/search-icon-04.png"/>
+          Shopping
+        </button>
+        
+        <button class="nav-link rounded bg-secondary text-white ps-0 pe-md-4  pad" id="v-pills-travel-tab" data-bs-toggle="pill" data-bs-target="#v-pills-travel" type="button" role="tab" aria-controls="v-pills-travel" aria-selected="false">
+          <img class="p-4 rounded-circle bg-light " src="../images/search-icon-05.png"/>
+          Travel
+        </button>
+      </div>
+      <div class="tab-content text-white w-100  tab_content_height" id="v-pills-tabContent">
+        <div class="tab-pane fade show active  " id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+          
+        <!-- house and apartments starts  -->
+        <div class="container mb-5 ">
+          <!-- sunny appartment starts  -->
+          <div class="d-flex flex-lg-row  flex-column mb-5">
+            <!-- sunny col-1 starts  -->
+            <div class="sunny_app_img d-flex flex-1 w-100 w-md-50 rounded justify-content-center align-items-center">
+              <div  class=" mb-3 ms-2 ms-md-0 ">
+                <a class="btn btn_orange text-white d-inline-block  mt-3 fs-3 " href="#">
+                  <i class="fa-solid fa-circle  pe-3 fs-3"></i>
+                  Contact Now
+                </a>                
+              </div>
+            </div>
+            <!-- sunny col-1 ends  -->
+            <div class="flex-1 p-5 w-100 w-md-50 bg-fade text-dark">
+              <!-- sunny col-2 starts  -->
+              <div class="d-flex flex-row m-0">
+                <!-- col-1 starts  -->
+                <div class=" d-flex flex-column flex-1 fs-5 lh-lg">
+                  <h3 class="fw-bold ">Third Page Apartment</h3>
+                  <p class="text-muted fs-5 ">by: Real Estate Agent</p>
+                  <p>
+                    <i class="fa-solid fa-hotel bg-secondary text-white p-3 rounded-circle fs-5 me-2"></i>
+                    <span>$600 - $900/ month included taxes</span>
+                  </p>
+                  <p><span class="text-muted">Details:</span>860 sq ft</p>
+                  <p>
+                    <i class="fa-solid fa-bed me-2 "></i>
+                    <span>2 Bedrooms</span>
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-bath me-2"></i>
+                    <span>3 Bathrooms</span>
+                  </p>
+                </div>
+                <!-- col-1 ends  -->
+              </div>
+              <!-- sunny col-2 ends  -->
+              </div>
+          </div>
+          <!-- sunny appartment ends  -->
+          <!-- house of gaming starts  -->
+          <div class="d-flex flex-lg-row  flex-column mb-5">
+            <!-- sunny col-1 starts  -->
+            <div class="hog_app_img d-flex flex-1 w-100 w-md-50 rounded justify-content-center align-items-center">
+              <div  class=" mb-3 ms-2 ms-md-0 d-none">
+                <a class="btn btn_orange text-white d-inline-block  mt-3 fs-3 " href="#">
+                  <i class="fa-solid fa-circle  pe-3 fs-3"></i>
+                  Contact Now
+                </a>                
+              </div>
+            </div>
+            <!-- sunny col-1 ends  -->
+            <div class="flex-1 p-5 w-100 w-md-50 bg-fade text-dark">
+              <!-- sunny col-2 starts  -->
+              <div class="d-flex flex-row m-0">
+                <!-- col-1 starts  -->
+                <div class=" d-flex flex-column flex-1 fs-5 lh-lg">
+                  <h3 class="fw-bold ">New Gaming Townhouse</h3>
+                  <p class="text-muted fs-5 ">by: Real Estate Agent</p>
+                  <p>
+                    <i class="fa-solid fa-hotel bg-secondary text-white p-3 rounded-circle fs-5 me-2"></i>
+                    <span>$840/ month included taxes</span>
+                  </p>
+                  <p><span class="text-muted">Details:</span>860 sq ft</p>
+                  <p>
+                    <i class="fa-solid fa-bed me-2 "></i>
+                    <span>2 Bedrooms</span>
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-bath me-2"></i>
+                    <span>3 Bathrooms</span>
+                  </p>
+                </div>
+                <!-- col-1 ends  -->
+              </div>
+              <!-- sunny col-2 ends  -->
+              </div>
+          </div>
+          <!-- house of gaming ends  -->
+          <!-- secret place of hidden house starts  -->
+          <div class="d-flex flex-lg-row  flex-column mb-5">
+            <!-- sunny col-1 starts  -->
+            <div class="sph_app_img d-flex flex-1 w-100 w-md-50 rounded justify-content-center align-items-center">
+              <div  class=" mb-3 ms-2 ms-md-0 d-none">
+                <a class="btn btn_orange text-white d-inline-block  mt-3 fs-3 " href="#">
+                  <i class="fa-solid fa-circle  pe-3 fs-3"></i>
+                  Contact Now
+                </a>                
+              </div>
+            </div>
+            <!-- sunny col-1 ends  -->
+            <div class="flex-1 p-5 w-100 w-md-50 bg-fade text-dark">
+              <!-- sunny col-2 starts  -->
+              <div class="d-flex flex-row m-0">
+                <!-- col-1 starts  -->
+                <div class=" d-flex flex-column flex-1 fs-5 lh-lg">
+                  <h3 class="fw-bold ">Amazing Party Villa</h3>
+                  <p class="text-muted fs-5 ">by: Real Estate Agent</p>
+                  <p>
+                    <i class="fa-solid fa-hotel bg-secondary text-white p-3 rounded-circle fs-5 me-2"></i>
+                    <span>$950/ month included taxes</span>
+                  </p>
+                  <p><span class="text-muted">Details:</span>860 sq ft</p>
+                  <p>
+                    <i class="fa-solid fa-bed me-2 "></i>
+                    <span>2 Bedrooms</span>
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-bath me-2"></i>
+                    <span>3 Bathrooms</span>
+                  </p>
+                </div>
+                <!-- col-1 ends  -->
+              </div>
+              <!-- sunny col-2 ends  -->
+              </div>
+          </div>
+          <!-- secret place of hidden house ends  -->
+        </div> 
+        <!-- house and apartments end  -->
+        <div class="text-center mb-5 pb-5">
+          <i class="fa-solid fa-circle  pe-3  text-secondary"></i>
+          <i class="fa-solid fa-circle  pe-3  text-secondary"></i>
+          <i class="fa-solid fa-circle  pe-3 fs-4 text-secondary"></i>
+        </div>
+        </div>
+        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+          
+        <!-- house and apartments starts  -->
+        <div class="container mb-5 ">
+          <!-- sunny appartment starts  -->
+          <div class="d-flex flex-lg-row  flex-column mb-5">
+            <!-- sunny col-1 starts  -->
+            <div class="sunny_app_img d-flex flex-1 w-100 w-md-50 rounded justify-content-center align-items-center">
+              <div  class=" mb-3 ms-2 ms-md-0 ">
+                <a class="btn btn_orange text-white d-inline-block  mt-3 fs-3 " href="#">
+                  <i class="fa-solid fa-circle  pe-3 fs-3"></i>
+                  Contact Now
+                </a>                
+              </div>
+            </div>
+            <!-- sunny col-1 ends  -->
+            <div class="flex-1 p-5 w-100 w-md-50 bg-fade text-dark">
+              <!-- sunny col-2 starts  -->
+              <div class="d-flex flex-row m-0">
+                <!-- col-1 starts  -->
+                <div class=" d-flex flex-column flex-1 fs-5 lh-lg">
+                  <h3 class="fw-bold ">Third Page Apartment</h3>
+                  <p class="text-muted fs-5 ">by: Real Estate Agent</p>
+                  <p>
+                    <i class="fa-solid fa-hotel bg-secondary text-white p-3 rounded-circle fs-5 me-2"></i>
+                    <span>$600 - $900/ month included taxes</span>
+                  </p>
+                  <p><span class="text-muted">Details:</span>860 sq ft</p>
+                  <p>
+                    <i class="fa-solid fa-bed me-2 "></i>
+                    <span>2 Bedrooms</span>
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-bath me-2"></i>
+                    <span>3 Bathrooms</span>
+                  </p>
+                </div>
+                <!-- col-1 ends  -->
+              </div>
+              <!-- sunny col-2 ends  -->
+              </div>
+          </div>
+          <!-- sunny appartment ends  -->
+          <!-- house of gaming starts  -->
+          <div class="d-flex flex-lg-row  flex-column mb-5">
+            <!-- sunny col-1 starts  -->
+            <div class="hog_app_img d-flex flex-1 w-100 w-md-50 rounded justify-content-center align-items-center">
+              <div  class=" mb-3 ms-2 ms-md-0 d-none">
+                <a class="btn btn_orange text-white d-inline-block  mt-3 fs-3 " href="#">
+                  <i class="fa-solid fa-circle  pe-3 fs-3"></i>
+                  Contact Now
+                </a>                
+              </div>
+            </div>
+            <!-- sunny col-1 ends  -->
+            <div class="flex-1 p-5 w-100 w-md-50 bg-fade text-dark">
+              <!-- sunny col-2 starts  -->
+              <div class="d-flex flex-row m-0">
+                <!-- col-1 starts  -->
+                <div class=" d-flex flex-column flex-1 fs-5 lh-lg">
+                  <h3 class="fw-bold ">New Gaming Townhouse</h3>
+                  <p class="text-muted fs-5 ">by: Real Estate Agent</p>
+                  <p>
+                    <i class="fa-solid fa-hotel bg-secondary text-white p-3 rounded-circle fs-5 me-2"></i>
+                    <span>$840/ month included taxes</span>
+                  </p>
+                  <p><span class="text-muted">Details:</span>860 sq ft</p>
+                  <p>
+                    <i class="fa-solid fa-bed me-2 "></i>
+                    <span>2 Bedrooms</span>
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-bath me-2"></i>
+                    <span>3 Bathrooms</span>
+                  </p>
+                </div>
+                <!-- col-1 ends  -->
+              </div>
+              <!-- sunny col-2 ends  -->
+              </div>
+          </div>
+          <!-- house of gaming ends  -->
+          <!-- secret place of hidden house starts  -->
+          <div class="d-flex flex-lg-row  flex-column mb-5">
+            <!-- sunny col-1 starts  -->
+            <div class="sph_app_img d-flex flex-1 w-100 w-md-50 rounded justify-content-center align-items-center">
+              <div  class=" mb-3 ms-2 ms-md-0 d-none">
+                <a class="btn btn_orange text-white d-inline-block  mt-3 fs-3 " href="#">
+                  <i class="fa-solid fa-circle  pe-3 fs-3"></i>
+                  Contact Now
+                </a>                
+              </div>
+            </div>
+            <!-- sunny col-1 ends  -->
+            <div class="flex-1 p-5 w-100 w-md-50 bg-fade text-dark">
+              <!-- sunny col-2 starts  -->
+              <div class="d-flex flex-row m-0">
+                <!-- col-1 starts  -->
+                <div class=" d-flex flex-column flex-1 fs-5 lh-lg">
+                  <h3 class="fw-bold ">Amazing Party Villa</h3>
+                  <p class="text-muted fs-5 ">by: Real Estate Agent</p>
+                  <p>
+                    <i class="fa-solid fa-hotel bg-secondary text-white p-3 rounded-circle fs-5 me-2"></i>
+                    <span>$950/ month included taxes</span>
+                  </p>
+                  <p><span class="text-muted">Details:</span>860 sq ft</p>
+                  <p>
+                    <i class="fa-solid fa-bed me-2 "></i>
+                    <span>2 Bedrooms</span>
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-bath me-2"></i>
+                    <span>3 Bathrooms</span>
+                  </p>
+                </div>
+                <!-- col-1 ends  -->
+              </div>
+              <!-- sunny col-2 ends  -->
+              </div>
+          </div>
+          <!-- secret place of hidden house ends  -->
+        </div> 
+        <!-- house and apartments end  -->
+        <div class="text-center mb-5 pb-5">
+          <i class="fa-solid fa-circle  pe-3  text-secondary"></i>
+          <i class="fa-solid fa-circle  pe-3  text-secondary"></i>
+          <i class="fa-solid fa-circle  pe-3 fs-4 text-secondary"></i>
+        </div>
+        </div>
+        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+          <!-- house and apartments starts  -->
+        <div class="container mb-5 ">
+          <!-- sunny appartment starts  -->
+          <div class="d-flex flex-lg-row  flex-column mb-5">
+            <!-- sunny col-1 starts  -->
+            <div class="sunny_app_img d-flex flex-1 w-100 w-md-50 rounded justify-content-center align-items-center">
+              <div  class=" mb-3 ms-2 ms-md-0 ">
+                <a class="btn btn_orange text-white d-inline-block  mt-3 fs-3 " href="#">
+                  <i class="fa-solid fa-circle  pe-3 fs-3"></i>
+                  Contact Now
+                </a>                
+              </div>
+            </div>
+            <!-- sunny col-1 ends  -->
+            <div class="flex-1 p-5 w-100 w-md-50 bg-fade text-dark">
+              <!-- sunny col-2 starts  -->
+              <div class="d-flex flex-row m-0">
+                <!-- col-1 starts  -->
+                <div class=" d-flex flex-column flex-1 fs-5 lh-lg">
+                  <h3 class="fw-bold ">Third Page Apartment</h3>
+                  <p class="text-muted fs-5 ">by: Real Estate Agent</p>
+                  <p>
+                    <i class="fa-solid fa-hotel bg-secondary text-white p-3 rounded-circle fs-5 me-2"></i>
+                    <span>$600 - $900/ month included taxes</span>
+                  </p>
+                  <p><span class="text-muted">Details:</span>860 sq ft</p>
+                  <p>
+                    <i class="fa-solid fa-bed me-2 "></i>
+                    <span>2 Bedrooms</span>
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-bath me-2"></i>
+                    <span>3 Bathrooms</span>
+                  </p>
+                </div>
+                <!-- col-1 ends  -->
+              </div>
+              <!-- sunny col-2 ends  -->
+              </div>
+          </div>
+          <!-- sunny appartment ends  -->
+          <!-- house of gaming starts  -->
+          <div class="d-flex flex-lg-row  flex-column mb-5">
+            <!-- sunny col-1 starts  -->
+            <div class="hog_app_img d-flex flex-1 w-100 w-md-50 rounded justify-content-center align-items-center">
+              <div  class=" mb-3 ms-2 ms-md-0 d-none">
+                <a class="btn btn_orange text-white d-inline-block  mt-3 fs-3 " href="#">
+                  <i class="fa-solid fa-circle  pe-3 fs-3"></i>
+                  Contact Now
+                </a>                
+              </div>
+            </div>
+            <!-- sunny col-1 ends  -->
+            <div class="flex-1 p-5 w-100 w-md-50 bg-fade text-dark">
+              <!-- sunny col-2 starts  -->
+              <div class="d-flex flex-row m-0">
+                <!-- col-1 starts  -->
+                <div class=" d-flex flex-column flex-1 fs-5 lh-lg">
+                  <h3 class="fw-bold ">New Gaming Townhouse</h3>
+                  <p class="text-muted fs-5 ">by: Real Estate Agent</p>
+                  <p>
+                    <i class="fa-solid fa-hotel bg-secondary text-white p-3 rounded-circle fs-5 me-2"></i>
+                    <span>$840/ month included taxes</span>
+                  </p>
+                  <p><span class="text-muted">Details:</span>860 sq ft</p>
+                  <p>
+                    <i class="fa-solid fa-bed me-2 "></i>
+                    <span>2 Bedrooms</span>
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-bath me-2"></i>
+                    <span>3 Bathrooms</span>
+                  </p>
+                </div>
+                <!-- col-1 ends  -->
+              </div>
+              <!-- sunny col-2 ends  -->
+              </div>
+          </div>
+          <!-- house of gaming ends  -->
+          <!-- secret place of hidden house starts  -->
+          <div class="d-flex flex-lg-row  flex-column mb-5">
+            <!-- sunny col-1 starts  -->
+            <div class="sph_app_img d-flex flex-1 w-100 w-md-50 rounded justify-content-center align-items-center">
+              <div  class=" mb-3 ms-2 ms-md-0 d-none">
+                <a class="btn btn_orange text-white d-inline-block  mt-3 fs-3 " href="#">
+                  <i class="fa-solid fa-circle  pe-3 fs-3"></i>
+                  Contact Now
+                </a>                
+              </div>
+            </div>
+            <!-- sunny col-1 ends  -->
+            <div class="flex-1 p-5 w-100 w-md-50 bg-fade text-dark">
+              <!-- sunny col-2 starts  -->
+              <div class="d-flex flex-row m-0">
+                <!-- col-1 starts  -->
+                <div class=" d-flex flex-column flex-1 fs-5 lh-lg">
+                  <h3 class="fw-bold ">Amazing Party Villa</h3>
+                  <p class="text-muted fs-5 ">by: Real Estate Agent</p>
+                  <p>
+                    <i class="fa-solid fa-hotel bg-secondary text-white p-3 rounded-circle fs-5 me-2"></i>
+                    <span>$950/ month included taxes</span>
+                  </p>
+                  <p><span class="text-muted">Details:</span>860 sq ft</p>
+                  <p>
+                    <i class="fa-solid fa-bed me-2 "></i>
+                    <span>2 Bedrooms</span>
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-bath me-2"></i>
+                    <span>3 Bathrooms</span>
+                  </p>
+                </div>
+                <!-- col-1 ends  -->
+              </div>
+              <!-- sunny col-2 ends  -->
+              </div>
+          </div>
+          <!-- secret place of hidden house ends  -->
+        </div> 
+        <!-- house and apartments end  -->
+        <div class="text-center mb-5 pb-5">
+          <i class="fa-solid fa-circle  pe-3  text-secondary"></i>
+          <i class="fa-solid fa-circle  pe-3  text-secondary"></i>
+          <i class="fa-solid fa-circle  pe-3 fs-4 text-secondary"></i>
+        </div>
+        </div>
+        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+          <!-- house and apartments starts  -->
+        <div class="container mb-5 ">
+          <!-- sunny appartment starts  -->
+          <div class="d-flex flex-lg-row  flex-column mb-5">
+            <!-- sunny col-1 starts  -->
+            <div class="sunny_app_img d-flex flex-1 w-100 w-md-50 rounded justify-content-center align-items-center">
+              <div  class=" mb-3 ms-2 ms-md-0 ">
+                <a class="btn btn_orange text-white d-inline-block  mt-3 fs-3 " href="#">
+                  <i class="fa-solid fa-circle  pe-3 fs-3"></i>
+                  Contact Now
+                </a>                
+              </div>
+            </div>
+            <!-- sunny col-1 ends  -->
+            <div class="flex-1 p-5 w-100 w-md-50 bg-fade text-dark">
+              <!-- sunny col-2 starts  -->
+              <div class="d-flex flex-row m-0">
+                <!-- col-1 starts  -->
+                <div class=" d-flex flex-column flex-1 fs-5 lh-lg">
+                  <h3 class="fw-bold ">Third Page Apartment</h3>
+                  <p class="text-muted fs-5 ">by: Real Estate Agent</p>
+                  <p>
+                    <i class="fa-solid fa-hotel bg-secondary text-white p-3 rounded-circle fs-5 me-2"></i>
+                    <span>$600 - $900/ month included taxes</span>
+                  </p>
+                  <p><span class="text-muted">Details:</span>860 sq ft</p>
+                  <p>
+                    <i class="fa-solid fa-bed me-2 "></i>
+                    <span>2 Bedrooms</span>
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-bath me-2"></i>
+                    <span>3 Bathrooms</span>
+                  </p>
+                </div>
+                <!-- col-1 ends  -->
+              </div>
+              <!-- sunny col-2 ends  -->
+              </div>
+          </div>
+          <!-- sunny appartment ends  -->
+          <!-- house of gaming starts  -->
+          <div class="d-flex flex-lg-row  flex-column mb-5">
+            <!-- sunny col-1 starts  -->
+            <div class="hog_app_img d-flex flex-1 w-100 w-md-50 rounded justify-content-center align-items-center">
+              <div  class=" mb-3 ms-2 ms-md-0 d-none">
+                <a class="btn btn_orange text-white d-inline-block  mt-3 fs-3 " href="#">
+                  <i class="fa-solid fa-circle  pe-3 fs-3"></i>
+                  Contact Now
+                </a>                
+              </div>
+            </div>
+            <!-- sunny col-1 ends  -->
+            <div class="flex-1 p-5 w-100 w-md-50 bg-fade text-dark">
+              <!-- sunny col-2 starts  -->
+              <div class="d-flex flex-row m-0">
+                <!-- col-1 starts  -->
+                <div class=" d-flex flex-column flex-1 fs-5 lh-lg">
+                  <h3 class="fw-bold ">New Gaming Townhouse</h3>
+                  <p class="text-muted fs-5 ">by: Real Estate Agent</p>
+                  <p>
+                    <i class="fa-solid fa-hotel bg-secondary text-white p-3 rounded-circle fs-5 me-2"></i>
+                    <span>$840/ month included taxes</span>
+                  </p>
+                  <p><span class="text-muted">Details:</span>860 sq ft</p>
+                  <p>
+                    <i class="fa-solid fa-bed me-2 "></i>
+                    <span>2 Bedrooms</span>
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-bath me-2"></i>
+                    <span>3 Bathrooms</span>
+                  </p>
+                </div>
+                <!-- col-1 ends  -->
+              </div>
+              <!-- sunny col-2 ends  -->
+              </div>
+          </div>
+          <!-- house of gaming ends  -->
+          <!-- secret place of hidden house starts  -->
+          <div class="d-flex flex-lg-row  flex-column mb-5">
+            <!-- sunny col-1 starts  -->
+            <div class="sph_app_img d-flex flex-1 w-100 w-md-50 rounded justify-content-center align-items-center">
+              <div  class=" mb-3 ms-2 ms-md-0 d-none">
+                <a class="btn btn_orange text-white d-inline-block  mt-3 fs-3 " href="#">
+                  <i class="fa-solid fa-circle  pe-3 fs-3"></i>
+                  Contact Now
+                </a>                
+              </div>
+            </div>
+            <!-- sunny col-1 ends  -->
+            <div class="flex-1 p-5 w-100 w-md-50 bg-fade text-dark">
+              <!-- sunny col-2 starts  -->
+              <div class="d-flex flex-row m-0">
+                <!-- col-1 starts  -->
+                <div class=" d-flex flex-column flex-1 fs-5 lh-lg">
+                  <h3 class="fw-bold ">Amazing Party Villa</h3>
+                  <p class="text-muted fs-5 ">by: Real Estate Agent</p>
+                  <p>
+                    <i class="fa-solid fa-hotel bg-secondary text-white p-3 rounded-circle fs-5 me-2"></i>
+                    <span>$950/ month included taxes</span>
+                  </p>
+                  <p><span class="text-muted">Details:</span>860 sq ft</p>
+                  <p>
+                    <i class="fa-solid fa-bed me-2 "></i>
+                    <span>2 Bedrooms</span>
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-bath me-2"></i>
+                    <span>3 Bathrooms</span>
+                  </p>
+                </div>
+                <!-- col-1 ends  -->
+              </div>
+              <!-- sunny col-2 ends  -->
+              </div>
+          </div>
+          <!-- secret place of hidden house ends  -->
+        </div> 
+        <!-- house and apartments end  -->
+        <div class="text-center mb-5 pb-5">
+          <i class="fa-solid fa-circle  pe-3  text-secondary"></i>
+          <i class="fa-solid fa-circle  pe-3  text-secondary"></i>
+          <i class="fa-solid fa-circle  pe-3 fs-4 text-secondary"></i>
+        </div>
+        </div>
+        <div class="tab-pane fade" id="v-pills-travel" role="tabpanel" aria-labelledby="v-pills-travel-tab">
+          <!-- house and apartments starts  -->
+        <div class="container mb-5 ">
+          <!-- sunny appartment starts  -->
+          <div class="d-flex flex-lg-row  flex-column mb-5">
+            <!-- sunny col-1 starts  -->
+            <div class="sunny_app_img d-flex flex-1 w-100 w-md-50 rounded justify-content-center align-items-center">
+              <div  class=" mb-3 ms-2 ms-md-0 ">
+                <a class="btn btn_orange text-white d-inline-block  mt-3 fs-3 " href="#">
+                  <i class="fa-solid fa-circle  pe-3 fs-3"></i>
+                  Contact Now
+                </a>                
+              </div>
+            </div>
+            <!-- sunny col-1 ends  -->
+            <div class="flex-1 p-5 w-100 w-md-50 bg-fade text-dark">
+              <!-- sunny col-2 starts  -->
+              <div class="d-flex flex-row m-0">
+                <!-- col-1 starts  -->
+                <div class=" d-flex flex-column flex-1 fs-5 lh-lg">
+                  <h3 class="fw-bold ">Third Page Apartment</h3>
+                  <p class="text-muted fs-5 ">by: Real Estate Agent</p>
+                  <p>
+                    <i class="fa-solid fa-hotel bg-secondary text-white p-3 rounded-circle fs-5 me-2"></i>
+                    <span>$600 - $900/ month included taxes</span>
+                  </p>
+                  <p><span class="text-muted">Details:</span>860 sq ft</p>
+                  <p>
+                    <i class="fa-solid fa-bed me-2 "></i>
+                    <span>2 Bedrooms</span>
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-bath me-2"></i>
+                    <span>3 Bathrooms</span>
+                  </p>
+                </div>
+                <!-- col-1 ends  -->
+              </div>
+              <!-- sunny col-2 ends  -->
+              </div>
+          </div>
+          <!-- sunny appartment ends  -->
+          <!-- house of gaming starts  -->
+          <div class="d-flex flex-lg-row  flex-column mb-5">
+            <!-- sunny col-1 starts  -->
+            <div class="hog_app_img d-flex flex-1 w-100 w-md-50 rounded justify-content-center align-items-center">
+              <div  class=" mb-3 ms-2 ms-md-0 d-none">
+                <a class="btn btn_orange text-white d-inline-block  mt-3 fs-3 " href="#">
+                  <i class="fa-solid fa-circle  pe-3 fs-3"></i>
+                  Contact Now
+                </a>                
+              </div>
+            </div>
+            <!-- sunny col-1 ends  -->
+            <div class="flex-1 p-5 w-100 w-md-50 bg-fade text-dark">
+              <!-- sunny col-2 starts  -->
+              <div class="d-flex flex-row m-0">
+                <!-- col-1 starts  -->
+                <div class=" d-flex flex-column flex-1 fs-5 lh-lg">
+                  <h3 class="fw-bold ">New Gaming Townhouse</h3>
+                  <p class="text-muted fs-5 ">by: Real Estate Agent</p>
+                  <p>
+                    <i class="fa-solid fa-hotel bg-secondary text-white p-3 rounded-circle fs-5 me-2"></i>
+                    <span>$840/ month included taxes</span>
+                  </p>
+                  <p><span class="text-muted">Details:</span>860 sq ft</p>
+                  <p>
+                    <i class="fa-solid fa-bed me-2 "></i>
+                    <span>2 Bedrooms</span>
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-bath me-2"></i>
+                    <span>3 Bathrooms</span>
+                  </p>
+                </div>
+                <!-- col-1 ends  -->
+              </div>
+              <!-- sunny col-2 ends  -->
+              </div>
+          </div>
+          <!-- house of gaming ends  -->
+          <!-- secret place of hidden house starts  -->
+          <div class="d-flex flex-lg-row  flex-column mb-5">
+            <!-- sunny col-1 starts  -->
+            <div class="sph_app_img d-flex flex-1 w-100 w-md-50 rounded justify-content-center align-items-center">
+              <div  class=" mb-3 ms-2 ms-md-0 d-none">
+                <a class="btn btn_orange text-white d-inline-block  mt-3 fs-3 " href="#">
+                  <i class="fa-solid fa-circle  pe-3 fs-3"></i>
+                  Contact Now
+                </a>                
+              </div>
+            </div>
+            <!-- sunny col-1 ends  -->
+            <div class="flex-1 p-5 w-100 w-md-50 bg-fade text-dark">
+              <!-- sunny col-2 starts  -->
+              <div class="d-flex flex-row m-0">
+                <!-- col-1 starts  -->
+                <div class=" d-flex flex-column flex-1 fs-5 lh-lg">
+                  <h3 class="fw-bold ">Amazing Party Villa</h3>
+                  <p class="text-muted fs-5 ">by: Real Estate Agent</p>
+                  <p>
+                    <i class="fa-solid fa-hotel bg-secondary text-white p-3 rounded-circle fs-5 me-2"></i>
+                    <span>$950/ month included taxes</span>
+                  </p>
+                  <p><span class="text-muted">Details:</span>860 sq ft</p>
+                  <p>
+                    <i class="fa-solid fa-bed me-2 "></i>
+                    <span>2 Bedrooms</span>
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-bath me-2"></i>
+                    <span>3 Bathrooms</span>
+                  </p>
+                </div>
+                <!-- col-1 ends  -->
+              </div>
+              <!-- sunny col-2 ends  -->
+              </div>
+          </div>
+          <!-- secret place of hidden house ends  -->
+        </div> 
+        <!-- house and apartments end  -->
+        <div class="text-center mb-5 pb-5">
+          <i class="fa-solid fa-circle  pe-3  text-secondary"></i>
+          <i class="fa-solid fa-circle  pe-3  text-secondary"></i>
+          <i class="fa-solid fa-circle  pe-3 fs-4 text-secondary"></i>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- list tab ends  -->
+    
+  </div>
+
+  <!-- middle ends  -->
+  <!-- footer starts  -->
+  <footer class="container my-5">
+    <!-- contact starts -->
+    <div class="container d-flex flex-column flex-lg-row  flex-lg-nowrap">
+      <!-- footer logo start  -->
+      <div class="flex-1 w-100">
+        <img src="../images/logo.png" alt="logo"/>
+        <p class="pe-4 me-3 fs-5 lh-lg">AchiversIT-provides a wide group of opportunities for freshers and experienced candidate who can develop thier career opportunities accross multiple companies</p>
+      </div>
+      <!-- footer logo ends  -->
+      <!-- helpful link starts  -->
+      <div class="flex-1 w-100">
+        <h2 class="text-muted fw-bold text-start lh-lg">Helpful Links</h2>
+        <div class="d-flex justify-content-start lh-lg">
+          <div class="d-flex flex-1 w-100 flex-column justify-content-start fs-5">
+            <a class="text-decoration-none " href="#">Categories</a>
+            <a class="text-decoration-none " href="#">Reviews</a>
+            <a class="text-decoration-none" href="#">Listing</a>
+            <a class="text-decoration-none" href="#">Contact Us</a>
+          </div>
+          <div class="d-flex flex-1 w-100 flex-column justify-content-start fs-5">
+            <a class="text-decoration-none" href="#">About Us</a>
+            <a class="text-decoration-none" href="#">Awards</a>
+            <a class="text-decoration-none" href="#">Useful Sites</a>
+            <a class="text-decoration-none" href="#">Privacy Policy</a>
+          </div>
+        </div>
+      </div> 
+      <!-- helpful link ends  -->
+      <!-- contact us link start  -->
+      <div class="d-flex flex-column flex-1 w-100">
+        <div class="lh-lg fs-5">
+          <h2 class="text-muted fw-bold text-start lh-lg">Contact Us</h2>
+        </div>
+        <div class="lh-lg fs-5">
+          <p class="lh-lg">#63, 1st Floor, 16th Main, 8th Cross BTM, 1st Stage, BTM Layout, Bengaluru, Karnataka 560029</p>
+        </div>
+        <div class="lh-lg fs-5">
+          <p class="lh-lg">India: +084310-404-57</p>
+        </div>
+      </div>
+      <!-- contact us link start  -->
+    </div>
+    <!-- contact ends -->
+    <hr class="my-5">
+    <!-- copyright starts  -->
+    <div class="p-2 text-center">
+      Copyright &copy; 2020 AchieversIT. All Rights Reserved 
+    </div>
+    <!-- copyright end  -->
+
+  </footer>
+  <!-- footer ends  -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

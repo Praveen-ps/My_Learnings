@@ -1,0 +1,79 @@
+*{
+    margin: 0%;
+}
+.top_section{
+    background-image: url(../images/banner-bg.jpg);
+    background-size: cover;
+    height: 100%;
+}
+.white{
+font-size:15px;
+}
+.vertical-line{
+    border-width: 20px;
+    border-right-color: rgb(8, 7, 7);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+.icon_row:hover{
+    transform: scale(1.2,1.2);
+}
+.car{
+    height: 80px;
+    width: 80px;
+}
+.width-50{
+    width:50%;
+}
+@media only screen and (min-width:742px){
+    /* laptop  */
+    .top_section{
+        height: 750px;
+    }
+    .jumbo{
+        margin-top: 120px;
+    }
+    .width-50{
+        width: 30% !important;
+    }
+    .pe-md-3{
+        padding-right: 20px;
+    }
+    .pe-md-3{
+        padding-right: 30px;
+    }
+    .pad{
+        padding-top:15% !important; 
+        padding-bottom: 15% !important;
+    }
+    .tab_content_height{
+        height: 830px !important;
+    }
+}
+@media only screen and (min-width:530px) and (max-width:800px){
+    /* tablet screen  */
+    .tab_content_height{
+        height: 750px !important;
+    }
+
+}
+.pad{
+    padding-top:15% !important; 
+    padding-bottom: 15% !important;
+}
+.btn_orange{
+    background-color: rgb(255, 72, 0) !important;
+}
+.tab_content_height{
+    height: 700px;
+    overflow: auto;
+}
+
+.flex-1{
+    flex: 1;
+}
+
+.bg-fade{
+    background-color: rgb(204, 196, 196);
+}

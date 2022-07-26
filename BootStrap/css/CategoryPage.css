@@ -1,0 +1,36 @@
+.jumbotron-listing{
+    margin:9% 0% 0% 13%;
+}
+.top_section{
+    background-image: url('../images/heading-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:700px;
+}
+.w-55{
+    width: 55%;
+}
+.flex-1{
+    flex: 1 ;
+}
+
+@media only screen and (min-width:742px){
+    /* laptop  */
+    .w-md-50{
+        width: 50%;
+    }
+    .pe-md-3{
+        padding-right: 20px;
+    }
+    .pe-md-3{
+        padding-right: 30px;
+    }
+    .pad{
+        padding-top:15% !important; 
+        padding-bottom: 15% !important;
+    }
+    .flex-md-3{
+        flex: 3 !important;
+    }
+
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object 2</title>
+</head>
+<body>
+    <script>
+        /* 
+        Task - 1
+
+            Given three arguments ⁠— an object obj of the stolen items, the pets name and a value ⁠— return an object with that name and value in it (as key-value pairs).
+
+            Examples
+            addName({}, "Brutus", 300) ➞ { Brutus: 300 }
+
+            addName({ piano: 500 }, "Brutus", 400) ➞ { piano: 500, Brutus: 400 }
+
+            addName({ piano: 500, stereo: 300 }, "Caligula", 440) ➞ { piano: 500, stereo: 300, Caligula: 440 }
+            Notes
+            The value argument will be a number.
+
+        */
+       function addName(obj,str,num){
+        obj[str]=num;
+        console.log(obj);
+       }
+       addName({ piano: 500, stereo: 300 }, "Caligula", 440);
+       /* 
+       Task - 2
+
+            The insurance guy calls again and apologizes. They found another policy made by your spouse, but this one is limited to cover a particular maximum in losses (for example, 50,000€). You send a bill to your spouse for the difference you lost.
+
+            Given an object of the stolen items and a limit, return the difference between the total value of those items and the limit of the policy.
+
+            Examples
+            calculateDifference({ "baseball bat": 20 }, 5) ➞ 15
+
+            calculateDifference({ skate: 10, painting: 20 }, 19) ➞ 11
+
+            calculateDifference({ skate: 200, painting: 200, shoes: 1 }, 400) ➞ 1
+            Notes
+            The object will always contain items (no empty objects).
+            The sum of the items will always be greater than the limit.
+
+       */
+        function calculateDifference(obj,val){
+            let valueOfObj=Object.values(obj);
+            let totalValue =0;
+            for(let i=0;i<valueOfObj.length;i++){
+                totalValue +=valueOfObj[i];
+            }
+            return (totalValue-val);
+        }
+        let diff = calculateDifference({ skate: 200, painting: 200, shoes: 1 }, 400);
+        console.log(diff);
+
+        /* 
+        Task - 3
+
+            Given an array of scrabble tiles, create a function that outputs the maximum possible score a player can achieve by summing up the total number of points for all the tiles in their hand. Each hand contains 7 scrabble tiles.
+
+            Here's an example hand:
+
+            [
+            { tile: "N", score: 1 },
+            { tile: "K", score: 5 },
+            { tile: "Z", score: 10 },
+            { tile: "X", score: 8 },
+            { tile: "D", score: 2 },
+            { tile: "A", score: 1 },
+            { tile: "E", score: 1 }
+            ]
+            The players maximumScore from playing all these tiles would be 1 + 5 + 10 + 8 + 2 + 1 + 1, or 28.
+
+            Examples
+            maximumScore([
+            { tile: "N", score: 1 },
+            { tile: "K", score: 5 },
+            { tile: "Z", score: 10 },
+            { tile: "X", score: 8 },
+            { tile: "D", score: 2 },
+            { tile: "A", score: 1 },
+            { tile: "E", score: 1 }
+            ]) ➞ 28
+
+            maximumScore([
+            { tile: "B", score: 2 },
+            { tile: "V", score: 4 },
+            { tile: "F", score: 4 },
+            { tile: "U", score: 1 },
+            { tile: "D", score: 2 },
+            { tile: "O", score: 1 },
+            { tile: "U", score: 1 }
+            ]) ➞ 15
+            Notes
+            Here, each tile is represented as an object with two keys: tile and score.
+
+        */
+       function maximumScore(arr){
+        let sum=0;
+        for(let i=0;i<arr.length;i++){
+            sum += (arr[i].score);
+        }
+        console.log(sum);
+       }
+       maximumScore([
+            { tile: "N", score: 1 },
+            { tile: "K", score: 5 },
+            { tile: "Z", score: 10 },
+            { tile: "X", score: 8 },
+            { tile: "D", score: 2 },
+            { tile: "A", score: 1 },
+            { tile: "E", score: 1 }
+            ])
+
+    /* 
+    Task - 4
+
+        Given an object of how many more pages each ink color can print, output the maximum number of pages the printer can print before any of the colors run out.
+
+        Examples
+        inkLevels({
+        "cyan": 23,
+        "magenta": 12,
+        "yellow": 10
+        }) ➞ 10
+
+        inkLevels({
+        "cyan": 432,
+        "magenta": 543,
+        "yellow": 777
+        }) ➞ 432
+
+        inkLevels({
+        "cyan": 700,
+        "magenta": 700,
+        "yellow": 0
+        }) ➞ 0
+        Notes
+        A single printed page requires each color once, so printing is not possible if any of the slots lack ink
+    */
+           function inkLevels(obj){
+                let inkCount = Object.values(obj);
+                /* for( let i =1;i<inkCount.length;i++){
+                    for(let j=0;j<i;j++){
+                        if(inkCount[i]<inkCount[j]){
+                            let temp = inkCount[j];
+                            inkCount[j]=inkCount[i];
+                            inkCount[i]=temp;
+                        }
+                    }
+                }
+                console.log(inkCount[0]); */
+                console.log(Math.min.apply(null,inkCount));
+            }
+            inkLevels({
+            "cyan": 432,
+            "magenta": 543,
+            "yellow": 777
+            })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Task</title>
+</head>
+<body>
+    <script>
+        /* 
+        1. Display book name according to the name author & reading statas 
+
+            var library = [ 
+            {
+                author: 'Bill Gates',
+                title: 'The Road Ahead',
+                readingStatus: true
+            },
+            {
+                author: 'Steve Jobs',
+                title: 'Walter Isaacson',
+                readingStatus: true
+            },
+            {
+                author: 'Suzanne Collins',
+                title:  'Mockingjay: The Final Book of The Hunger Games', 
+                readingStatus: false
+            }];
+
+            Output
+
+            Already read 'Bill Gates' by The Road Ahead.
+            Already read 'Steve Jobs' by Walter Isaacson.
+            You still need to read 'Mockingjay: The Final Book of The Hunger Games' by Suzanne Collins.
+
+        */
+       let library =[
+        {
+            author:'Bill Gates',
+            title:'The Road Ahead',
+            readingStatus:true
+        },
+        {
+            author:'Steve Jobs',
+            title:'Walter Isaacson',
+            readingStatus: true 
+        },
+        {
+            author:'Suzanne Collins',
+            title:'Mockingjay: The Final Book of The Hunger Games',
+            readingStatus:false
+        }
+       ]
+       for(let i=0;i<library.length;i++){
+        if(library[i].readingStatus===true){
+            console.log(`Already read '${library[i].title}' by ${library[i].author}`);
+        }
+        else{
+            console.log(`You still need to read '${library[i].title}' by ${library[i].author}`);
+        }
+       }
+       /* 
+       2. Using  compare operator  compare 2 objects and return true or false  accordingly 
+
+            areEqual({ a: 1, b: 2 }, { a: 1, b: 2 }) === true;
+            areEqual({ a: 2, b: 2 }, { a: 1, b: 2 }) === false;
+            areEqual({}, {}) === true;
+
+       */
+      let obj=[{a:1,b:2},{a:1,b:2}]
+       let obj1=obj[0];
+       let obj2=obj[1];
+       JSON.stringify(obj1)===JSON.stringify(obj2)?console.log(`true`):console.log(`false`);
+
+/* 
+       3. Complete the below problem 
+
+            const person1 = { 
+                'name': 'Alex',
+                'address': '15th Park Avenue',
+                'age': 43
+            }
+
+            Add new property  to person1 object 
+
+            salary=123455
+
+            Expected output
+
+            const person1 = { 
+                name: 'Alex',
+                address: '15th Park Avenue',
+                age: 43,
+                salary:123455
+            }
+
+            Print the below statment in the console
+            Alex has age 43 and she has salary 123455
+            
+
+*/
+            const person1 = { 
+                'name': 'Alex',
+                'address': '15th Park Avenue',
+                'age': 43
+            }
+             person1.salary="123455";
+             console.log(`${JSON.stringify(person1)}`); //method one converting to string and then printhing
+            //console.log(person1) directly printing the object
+            //console.log(`${person1}`) // will not work because it print as object object
+             console.log(`${person1.name} has age ${person1.age} and she has salary ${person1.salary}`); 
+/* 
+            4.  Complete the below problem 
+  
+                const person2=  { 
+                        'name': 'Bob',
+                        'address': 'Canada',
+                        'age': 53
+                    },
+
+                Set salary of person1  to salary of person2
+
+                Expected output
+
+                const person2=  { 
+                        name: 'Bob',
+                        address: 'Canada',
+                        age: 53,
+                        salary:123455
+                    },
+
+*/
+                const person2=  { 
+                    'name': 'Bob',
+                    'address': 'Canada',
+                    'age': 53
+                }
+                person2["salary"]=person1.salary;
+                console.log(person2);
+                // person2={...person2,person1.}
+
+/* 
+Array 
+*/
+/* 1. WAP to sum all the elements of an array input array = [3,6,9,10, 15, 9]  
+  Expected output = 52
+ */
+         const inputArray=[3,6,9,10,15,9];
+         let sumOfArray=0;
+         for(let i=0;i<inputArray.length;i++){
+            sumOfArray += inputArray[i];
+         }   
+         console.log(sumOfArray);
+
+/* 
+    2. Revese  given a string 
+
+    let arr= Javascript
+    Expected output = tpircsavaJ
+*/
+         let stringName = "Javascript";
+         let reverseStringName="";
+         for(let i =stringName.length-1;i>=0;i--){
+            reverseStringName +=stringName[i];
+         }
+         console.log(reverseStringName);
+
+/* 
+    3 WAP to capitalise the third word of a sentence and make it reverse 
+
+    input = "Rama went to forest"
+    Expected output = "Rama went TO forest".
+    Reverse = tserof OT tnew amaR
+
+*/
+/* 
+         let word =input.split(" ");
+         let recap = word[2].toUpperCase();
+         word.splice(2,1,recap);
+         let capitalInput=word.join(" ");
+         console.log(capitalInput);
+         let revword=capitalInput.split("");
+         console.log(revword.reverse().join("")); 
+         
+         */
+         let input ="Rama went to forest";
+
+         let word =input.split(" ");
+            word.splice(2,1,word[2].toUpperCase());
+            wordCap =word.join(" ");
+            console.log(wordCap);
+            // reversedInput = wordCap.split("");
+          console.log(wordCap.split("").reverse().join(""));
+/* 
+        4  separate even and odd numbers in a given array  
+        input = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        Expected output = [2,4,6,8], [1,3,5,7,9]
+
+*/
+        inputArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        let res=[];
+        let odd=[];
+        let even=[];
+         for(let i = 0;i<inputArr.length;i++){
+            if(inputArr[i]%2===0){
+                even.push(inputArr[i]);
+            }
+            else{
+                odd.push(inputArr[i]);
+            }
+         }
+         res.push(even);
+         res.push(odd);
+         console.log(res);
+
+/* 
+        5.Reverse Given array 
+        arr=[1,2,3,4]
+        Expected output =[4,3,2,1]
+
+*/
+
+const exampleInput =[1,2,3,4];
+/*      Method 1 using for loop
+         
+    const exampleInputReverse=[];
+    for(let i=exampleInput.length-1;i>=0;i--){
+        exampleInputReverse.push(exampleInput[i]);
+    }
+        console.log(exampleInputReverse); 
+*/
+    //method 2
+    console.log(exampleInput.reverse());
+
+/* 
+    5. Remove duplicate  number & make new array 
+
+        arr=[1,1,2,8,5,8,6,2]
+        Expected output=[1,2,8,5,6]
+*/
+
+    let dupArr=[1,1,2,8,5,8,6,2];
+    let arrayWithoutDuplicate=[];
+    for(let i=0;i<dupArr.length;i++){
+        if(!arrayWithoutDuplicate.includes(dupArr[i])){
+            arrayWithoutDuplicate.push(dupArr[i]);
+        }
+    }
+    console.log(arrayWithoutDuplicate);
+
+/* 
+    6. join 2 given array  
+    arr=[1,2,3]
+    arr1=[4,5,6]
+    Expected output=[1,2,3,4,5,6]
+*/
+    let exampleArr1=[1,2,3];
+    let exampleArr2=[4,5,6];
+    /* 
+    using spread syntax
+    let outputArray=[...exampleArr1,...exampleArr2];
+    console.log(outputArray); 
+    */
+   // using concat() method
+    console.log(exampleArr1.concat(exampleArr2));
+
+   /*  
+        using for loop
+    
+   for(let i=0;i<(exampleArr2.length );i++){
+    exampleArr1.push(exampleArr2[i]);
+   }
+   console.log(exampleArr1); */
+
+   /* 
+   
+    7. Find second largest & smallest number in given array
+    Arr =[20,30,35,45,52]
+    Expected output= 45 largest & 30 smallest
+   */
+    //let randomArr=[20,30,35,45,52,19];
+    /* 
+        // method 1 using math method 
+    maxNumber = Math.max.apply(null,randomArr);
+    minNumber = Math.min.apply(null,randomArr);
+    randomArr.splice(randomArr.indexOf(maxNumber),1);
+    randomArr.splice(randomArr.indexOf(minNumber),1);
+    console.log(`${Math.max.apply(null,randomArr)} largest & ${Math.min.apply(null,randomArr)} smallest`);
+
+ */
+
+   let someArr=[20,30,35,45,52,19,42,54,10,3,64,42,4];
+   
+    // using for loop and sorting   
+   for(let i=1;i<someArr.length;i++){
+    for(let j=0;j<i;j++){
+        if(someArr[i]<someArr[j]){
+            let temp = someArr[i];
+            someArr[i]=someArr[j];
+            someArr[j]=temp;
+        }
+    }
+   }
+   console.log(someArr);
+   console.log(`${someArr[someArr.length-2]} largest & ${someArr[1]} smallest`);
+
+    </script>
+</body>
+</html>

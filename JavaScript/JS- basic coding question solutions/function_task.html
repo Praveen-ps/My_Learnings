@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 08/08/22</title>
+</head>
+<body>
+    <script>
+        /* 
+        Task - 1
+            When resistors are connected together in series, the same current passes through each resistor in the chain and the total resistance, RT, of the circuit must be equal to the sum of all the individual resistors added together. That is:
+
+            RT = R1 + R2 + R3 ...
+            Create a function that takes an array of values resistance that are connected in series, and calculates the total resistance of the circuit in ohms. The ohm is the standard unit of electrical resistance in the International System of Units ( SI ).
+
+            Examples
+            seriesResistance([1, 5, 6, 3]) ➞ "15 ohms"
+
+            seriesResistance([16, 3.5, 6]) ➞ "25.5 ohms"
+
+            seriesResistance([0.5, 0.5]) ➞ "1.0 ohm"
+            Notes
+            All inputs will be valid.
+            Notice the singular ohm for values <= 1.
+
+        */
+       function seriesResistance(arr){
+        let sum = 0;
+        
+        for(let i=0;i<arr.length;i++){
+            sum +=arr[i];
+        }
+        let unit=(sum<=1)?"ohm":"ohms";
+        console.log(`${sum} ${unit}`);
+       }
+       seriesResistance([1, 5, 6, 3]);
+
+       /* 
+       Task - 2
+            Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.
+
+            Examples
+            minMax([1, 2, 3, 4, 5]) ➞ [1, 5]
+
+            minMax([2334454, 5]) ➞ [5, 2334454]
+
+            minMax([1]) ➞ [1, 1]
+            Notes
+            All test arrays will have at least one element and are valid.
+
+       
+       */
+       
+       function minMax(arr){
+        let mini = arr[0];
+        let maxi = arr[0];
+        let res=[];
+        for(let i =0; i<arr.length;i++){
+            if(arr[i]<mini){
+                mini=arr[i];
+            }
+            if(arr[i]>maxi){
+                maxi=arr[i];
+            }
+        }
+        res.push(mini);
+        res.push(maxi);
+        console.log(res);
+       }
+       minMax([1]);
+/* 
+       Task - 3
+            Create a function to return the amount of potatoes there are in a string.
+
+            Examples
+            potatoes("potato") ➞ 1
+
+            potatoes("potatopotato") ➞ 2
+
+            potatoes("potatoapple") ➞ 1
+
+*/
+        function potatoes(str){
+            let count=0;
+            for(let i=0;i<str.length;i++){
+                if((str.substring(i,i+("potato".length)))==="potato"){
+                    count++;
+                }
+            }
+            console.log(count);
+        }     
+        potatoes("potatoapplepotatoapple")
+        /* let len = "potato".length;
+        console.log(len); */
+
+/* 
+        Task - 4
+            Create a function that takes a string and returns the number (count) of vowels contained within it.
+
+            Examples
+            countVowels("Celebration") ➞ 5
+
+            countVowels("Palm") ➞ 1
+
+            countVowels("Prediction") ➞ 4
+            Notes
+            a, e, i, o, u are considered vowels (not y).
+            All test cases are one word and only contain letters.
+
+
+*/
+        function countVowels(str){
+            let count = 0;
+            for(let i =0;i<str.length;i++){
+                if((str[i]==="a")||(str[i]==="e")||(str[i]==="i")||(str[i]==="o")||(str[i]==="u")){
+                    count++;
+                }
+            }
+            console.log(count);
+        }
+        countVowels("Celebration");     
+
+/* 
+    Task - 5
+
+        Create a function that takes two arguments: the original price and the discount percentage as integers and returns the final price after the discount.
+
+        Alternative Text
+
+        Examples
+        dis(1500, 50) ➞ 750
+
+        dis(89, 20) ➞ 71.2
+
+        dis(100, 75) ➞ 25
+        Notes
+        Your answer should be rounded to two decimal places.
+
+*/
+        let dis = (price,discountPercentage) =>{
+            let discountAmount = price *(discountPercentage/100);
+            console.log(price-discountAmount);
+        }
+        dis(89, 20);
+
+
+
+        /* 
+            Generate 6 random alphanumeric code
+        */
+       let characters ="1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        let  chrLength = characters.length-1;
+        let codeLength=6;
+        let randomCode="";
+        for(let i=codeLength;i>0;i--){
+            randomCode += characters[Math.round(Math.random()*chrLength)];
+        }
+        console.log(randomCode);
+
+        /* 
+
+        
+        */
+        function fruit(str){
+            let count = 0;
+            
+            for(let i=0;i<str.length;i++){
+                // let dupstr=str;
+                if((str.substring(i,(i+"potato".length)))==="potato"){
+                    count++;
+                }
+            }
+            console.log(count);
+        }
+        fruit("potatopotatoapplepotatopotatoapple");
+            //'01234567890'
+        /* 
+            i=0;
+            str.substring(0,0+6); ==> (0,6)==>potato ==="potato"==>c=1;
+            i=1;
+            str.substr(1,7);==>otatoa ==="potato";
+            i=2;
+            2,8==>tatoap 
+            i=3;
+
+
+
+
+        */
+
+        let stri ="BalaRudzz";
+        console.log(stri.substring(3,6));
+       
+    </script>
+</body>
+</html>

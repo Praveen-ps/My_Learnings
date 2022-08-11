@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Pyramid</title>
+</head>
+
+<body>
+    <script>
+        /* Write a Program to print the Full Pyramid Star pattern. */
+        let n = 5
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= n - i; j++) {
+                document.write(`&nbsp`);
+            }
+            for (let k = 0; k < 2 * i - 1; k++) {
+                document.write(`*`);
+            }
+            document.write(`<br/>`);
+        }
+        document.write(`<br>`);
+        //reversed pyramid
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j < i; j++) {
+                document.write(`1`);
+            }
+            for (let k = 1; k <= (n - i + 1) * 2 - 1; k++) {
+                document.write(`*`);
+            }
+            document.write(`<br/>`)
+        }
+
+        /* 
+            Hollow pyramid star pattern
+        */
+        document.write(`<br>`);
+        for (let i = 1; i <= n; i++) {
+            for (let k = 1; k < n - i; k++) {
+                document.write(`1`);
+            }
+            for (let j = 1; j <= (i * 2) - 1; j++) {
+                if (i == 1 || i == n) {
+                    document.write(`*`);
+                }
+                else if (j == 1 || j == ((2 * i) - 2)) {
+                    document.write(`*`);
+                }
+                else {
+                    document.write(`1`);
+                }
+            }
+            document.write(`<br/>`);
+        }
+        //    Prymid number pattern
+
+        document.write(`<br/>`);
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= n - i; j++) {
+                document.write(`*`);
+            }
+            for (let k = 1; k <= i; k++) {
+                document.write(`${k}`);
+            }
+            for (let l = i - 1; l >= 1; l--) {
+                document.write(`${l}`);
+            }
+            document.write(`<br/>`)
+        }
+
+        /* 
+        You a given a number N. You need to print the pattern for the given value of N.
+    
+            For N = 2 the pattern will be 
+            2 2 1 1
+            2 1
+            
+            For N = 3 the pattern will be 
+            3 3 3 2 2 2 1 1 1
+            3 3 2 2 1 1
+            3 2 1
+                
+        */
+        document.write(`<br/>`);
+        n=3;
+        for(let i=1;i<=n;i++){
+            for(let j=n;j>=i;j--){
+                let k=n-i+1;
+                while(k>0){
+                    document.write(`${j}`);
+                    k--;
+                }
+            }
+            document.write(`<br/>`);
+        }
+        
+
+    </script>
+</body>
+
+</html>
